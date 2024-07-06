@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
+
+body{
+    font-family: "Lalezar", serif;
+    padding: 50px;
+}
+#addContentBox,#contentsBox{
+    text-align: center;
+    box-shadow: 0px 0px 20px 2px #c7c7c7;
+    border-radius: 20px;
+    background: #47ad1f38;
+}
+img{
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+}
