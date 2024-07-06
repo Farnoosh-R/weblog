@@ -19,6 +19,7 @@ const register = () =>{
     summery: elSummery,
     body: elBody,
     cat: elCat,
+    date: '1403/07/07',
     id: uuid(),
    });
 
@@ -27,12 +28,4 @@ const register = () =>{
 //    console.log('retrievedObject: ', JSON.parse(retrievedObject));
 
 console.log(arrayArticles);
-createElement();
-}
-
-const createElement = () => {
-    let output = document.getElementById('output');
-    let elTitleContent = document.createElement('p');
-    elTitleContent.innerHTML =  arrayArticles.title;
-    output.appendChild(elTitleContent);
 }
