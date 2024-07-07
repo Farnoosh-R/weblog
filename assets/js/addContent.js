@@ -8,6 +8,16 @@ function uuid() {
     });
   }
 
+  function getToday(){
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+  today = mm + '/' + dd + '/' + yyyy;
+  return today;
+  }
+
 const register = () =>{
     let elTitle = document.getElementById('art-title').value;
     let elSummery = document.getElementById('art-summery').value;
@@ -19,13 +29,12 @@ const register = () =>{
     summery: elSummery,
     body: elBody,
     cat: elCat,
-    date: '1403/07/07',
+    date: getToday(),
+    datePublish: 'publishdate',
     id: uuid(),
    });
 
    localStorage.setItem('arrayArticle', JSON.stringify(arrayArticles));
-//    var retrievedObject = localStorage.getItem('arrayArticle');
-//    console.log('retrievedObject: ', JSON.parse(retrievedObject));
 
 console.log(arrayArticles);
 }
