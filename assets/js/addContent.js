@@ -18,11 +18,20 @@ function uuid() {
   return today;
   }
 
+$(document).ready(function () {
+  $(function () {
+    $("#art-pub-date").datepicker();
+  });
+}) 
+
+
+
 const register = () =>{
     let elTitle = document.getElementById('art-title').value;
     let elSummery = document.getElementById('art-summery').value;
     let elCat = document.getElementById('art-cat').value;
     let elBody = document.getElementById('art-body').value;
+    let elDatePub = document.getElementById('art-pub-date');
 
    arrayArticles.push({
     title: elTitle,
@@ -30,10 +39,10 @@ const register = () =>{
     body: elBody,
     cat: elCat,
     date: getToday(),
-    datePublish: 'publishdate',
+    datePublish: elDatePub.value,
     id: uuid(),
    });
-
+   console.log(arrayArticles);
    localStorage.setItem('arrayArticle', JSON.stringify(arrayArticles));
 
 console.log(arrayArticles);

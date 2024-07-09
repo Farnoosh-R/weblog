@@ -18,3 +18,9 @@ img{
 #output{
     text-align: right;
 }
+.row-content-box{
+    border: dashed 2px #a5c299;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
