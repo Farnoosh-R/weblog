@@ -13,30 +13,40 @@
 
  function showArticle(data){
 
-    const params = new URL(location.href).searchParams;
+    //const params = new URL(location.href).searchParams;
+    
+
+    //let url= new URL('https://javascriptjeep.com?mode=night&page=2');
+    let url = window.location
+    let params = new URLSearchParams(url.search);
     const paramId = params.get('article_id');
+    console.log(params.get('article_id'));
     
     
-    data.forEach(item => {
+    //data.forEach(item => {
         //console.log(item.title)
-        let idFilter = data.filter((p) => p.id == paramId)[0];
-        if (idFilter){
+        let objContent = data.filter((p) => p.id === paramId);
+        console.log(objContent)
+        if (objContent.length === 1){
             console.log('ok')
+            let elContentBox = document.getElementById('content-box');
             let elContent = document.createElement('div');
             let elImg = document.createElement('img');
             elImg.src = "../assets/images/image1.jpg"
             let elTitle = document.createElement('h3');
             let elBody = document.createElement('p');
 
-            elTitle.innerHTML = item.title;
-            elDes.innerHTML = item.body;
+            elTitle.innerHTML = objContent[0].title;
+            elBody.innerHTML = objContent[0].body;
             elContent.appendChild(elImg)
             elContent.appendChild(elTitle)
             elContent.appendChild(elBody)
+            elContentBox.appendChild(elContent)
+
 
         }
         
-    });
+  //  });
  }
 
 

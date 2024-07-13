@@ -27,7 +27,7 @@ const createElement = (data) => {
             let elDes = document.createElement('a');
             elDes.classList.add('btn', 'btn-success');
             let btnText = document.createTextNode("Read more");
-            elDes.setAttribute('href', `/content.html?article_id=${item.id}&article_title=${item.title}`);
+            elDes.setAttribute('href', `/pages/content.html?article_id=${item.id}&article_title=${item.title}`);
 
 
    

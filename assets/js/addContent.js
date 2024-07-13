@@ -40,6 +40,7 @@ const register = () =>{
     cat: elCat,
     date: getToday(),
     datePublish: elDatePub.value,
+    visit: 0,
     id: uuid(),
    });
    console.log(arrayArticles);
